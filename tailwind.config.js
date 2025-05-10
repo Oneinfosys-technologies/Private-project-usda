@@ -19,6 +19,7 @@ export default {
         'spin-slow': 'spin 15s linear infinite',
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'gradient': 'gradient 15s ease infinite',
       },
       keyframes: {
         float: {
@@ -28,6 +29,9 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      backgroundSize: {
+        '300%': '300%',
       },
     },
   },

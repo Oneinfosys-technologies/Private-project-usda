@@ -67,6 +67,30 @@
     @apply text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto text-center mb-16;
   }
 
+  /* Loader */
+  .loader {
+    display: block;
+    --height-of-loader: 4px;
+    --loader-color: rgb(var(--color-primary));
+    width: 130px;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+  }
+
+  .loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
+  }
+
   /* Animations */
   .fade-in {
     @apply opacity-0 transition-opacity duration-1000;
@@ -82,5 +106,29 @@
 
   .slide-up.appear {
     @apply translate-y-0 opacity-100;
+  }
+
+  @keyframes moving {
+    50% {
+      width: 100%;
+    }
+
+    100% {
+      width: 0;
+      right: 0;
+      left: unset;
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }
