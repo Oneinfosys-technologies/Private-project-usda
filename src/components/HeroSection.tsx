@@ -72,29 +72,12 @@ const HeroSection: React.FC = () => {
             <div className="absolute w-48 h-48 bg-accent/20 rounded-full filter blur-3xl animate-pulse"></div>
             
             <div className="relative w-64 h-64">
-              {/* Main USDA Circle */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary p-[2px]">
                 <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
                   <span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                     USDA
                   </span>
                 </div>
-              </div>
-              
-              {/* Rotating Yellow Dots */}
-              <div className="absolute inset-0 animate-spin-slow">
-                {Array.from({ length: 12 }).map((_, i) => (
-                  <div 
-                    key={i} 
-                    className="absolute w-3 h-3 rounded-full bg-accent"
-                    style={{ 
-                      left: '50%',
-                      top: '0%',
-                      transform: `rotate(${i * 30}deg) translateY(-32px)`,
-                      filter: 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.5))'
-                    }}
-                  />
-                ))}
               </div>
             </div>
           </div>
