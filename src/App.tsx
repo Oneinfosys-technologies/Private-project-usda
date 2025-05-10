@@ -20,7 +20,6 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
-    // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
